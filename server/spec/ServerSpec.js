@@ -45,12 +45,12 @@ describe("Node Server Request Listener Function", function() {
    handler.handleRequest(req, res);
 
    expect(res._responseCode).toEqual(200);
-   expect(res._data).toEqual("[]");
+   expect(res._data).toEqual('[]');
    expect(res._ended).toEqual(true);
  });
 
  it("Should accept posts to /classes/room", function() {
-   var req = new StubRequest("http://127.0.0.1:8080/classes/room1",
+   var req = new StubRequest("http://127.0.0.1:3000/classes/room1",
                              "POST",
                             {username: "Jono",
                              message: "Do my bidding!"});
